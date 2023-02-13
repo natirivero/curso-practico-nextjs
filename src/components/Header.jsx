@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Menu from '@components/Menu';
 import MyOrder from '@containers/MyOrder';
 import menu from '@icons/icon_menu.svg';
@@ -21,25 +22,27 @@ const Header = () => {
     <nav className={styles.Nav}>
       <Image src={menu} alt="menu" className={styles.Menu} />
       <div className={styles['navbar-left']}>
-        <Image src={logo} alt="logo" className={styles['nav-logo']} />
+        <Link href="/">
+          <Image src={logo} alt="logo" className={styles['nav-logo']} />
+        </Link>
         <ul>
           <li>
-            <a href="/">All</a>
+            <Link href="/">All</Link>
           </li>
           <li>
-            <a href="/">Clothes</a>
+            <Link href="/">Clothes</Link>
           </li>
           <li>
-            <a href="/">Electronics</a>
+            <Link href="/">Electronics</Link>
           </li>
           <li>
-            <a href="/">Furnitures</a>
+            <Link href="/">Furnitures</Link>
           </li>
           <li>
-            <a href="/">Toys</a>
+            <Link href="/">Toys</Link>
           </li>
           <li>
-            <a href="/">Others</a>
+            <Link href="/">Others</Link>
           </li>
         </ul>
       </div>

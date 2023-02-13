@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import OrderItem from '@components/OrderItem';
+import Link from 'next/link';
+import Image from 'next/image';
 import AppContext from '@context/AppContext';
 import arrow from '@icons/flechita.svg';
 // The "styles" must be at the end of the imports
@@ -17,7 +19,7 @@ const MyOrder = () => {
   return (
     <aside className={styles.MyOrder}>
       <div className={styles['title-container']}>
-        <img src={arrow} alt="arrow" />
+        <Image src={arrow} alt="arrow" />
         <p className={styles.title}>My order</p>
       </div>
       <div className={styles['my-order-content']}>
@@ -30,7 +32,9 @@ const MyOrder = () => {
           </p>
           <p>${sumTotal()}</p>
         </div>
-        <button className={styles['primary-button']}>Checkout</button>
+        <Link className={styles['primary-button']} href="/checkout">
+          Checkout
+        </Link>
       </div>
     </aside>
   );
