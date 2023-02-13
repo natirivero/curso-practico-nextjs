@@ -20,8 +20,7 @@ import '@styles/global.scss';
  * https://platzi.com/tutoriales/2484-react-practico/12068-desplegar-una-app-de-react-junto-con-otros-projectos-en-github-pages/
  */
 const App = () => {
-  const initialState =
-    useInitialState(); /* Funcion que retorna state y addToCart */
+  const initialState = useInitialState(); /* Funcion que retorna state y addToCart */
   return (
     <AppContext.Provider value={initialState}>
       <BrowserRouter basename="curso-practico-react/">
@@ -29,11 +28,7 @@ const App = () => {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/login" element={<Login />} />
-            <Route
-              exact
-              path="/password-recovery"
-              element={<PasswordRecovery />}
-            />
+            <Route path="/password-recovery" exact element={<PasswordRecovery />} />
             <Route path="/send-email" exact element={<SendEmail />} />
             <Route path="/new-password" exact element={<NewPassword />} />
             <Route path="/account" exact element={<MyAccount />} />
