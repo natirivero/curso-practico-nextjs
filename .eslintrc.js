@@ -15,5 +15,8 @@ module.exports = {
   ],
   rules: {
     semi: ['error', 'always'], // Require semicolon
+    'prettier/prettier': 0, // ignore this rule
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/no-noninteractive-element-interactions': 0,
   },
 };

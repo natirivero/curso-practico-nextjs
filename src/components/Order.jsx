@@ -1,17 +1,17 @@
 import React from 'react';
-import '../styles/Order.scss';
-
+import Image from 'next/image';
 import flechita from '@logos/flechita.svg';
+import styles from '@styles/Order.scss';
 
 const Order = () => {
   return (
-    <div className="Order">
+    <div className={styles.Order}>
       <p>
         <span>03.25.21</span>
         <span>6 articles</span>
       </p>
       <p>$560.00</p>
-      <img src={flechita} alt="arrow" />
+      <Image src={flechita} alt="arrow" />
     </div>
   );
 };

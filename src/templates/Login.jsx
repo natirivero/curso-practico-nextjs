@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
-import '@styles/Login.scss';
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from '@styles/Login.module.scss';
 
 import logo from '@logos/logo_yard_sale.svg';
 
@@ -18,24 +20,24 @@ const Login = () => {
   };
 
   return (
-    <div className="login-form">
-      <div className="login-form-container">
-        <img src={logo} alt="logo" className="logo" />
-        <form action="/" className="form" ref={form}>
-          <label htmlFor="email" className="label">
+    <div className={styles['login-form']}>
+      <div className={styles['login-form-container']}>
+        <Image src={logo} alt="logo" className={styles.logo} />
+        <form action="/" className={styles.form} ref={form}>
+          <label htmlFor="email" className={styles.label}>
             Email address
           </label>
-          <input type="text" id="email" placeholder="platzi@example.cm" className="input input-email" />
-          <label htmlFor="password" className="label">
+          <input type="text" id="email" placeholder="platzi@example.com" className={`${styles.input} ${styles['input-email']}`} />
+          <label htmlFor="password" className={styles.label}>
             Password
           </label>
-          <input type="password" id="password" placeholder="*********" className="input input-password" />
-          <button type="submit" className="primary-button login-button" onClick={handleSubmit}>
+          <input type="password" id="password" placeholder="*********" className={`${styles.input} ${styles['input-password']}`} />
+          <button type="submit" className={`${styles['primary-button']} ${styles['login-button']}`} onClick={handleSubmit}>
             Login
           </button>
-          <a href="/">Forgot my password</a>
+          <Link href="/">Forgot my password</Link>
         </form>
-        <button className="secondary-button signup-button">Sign up</button>
+        <button className={`${styles['secondary-button']} ${styles['signup-button']}`}>Sign up</button>
       </div>
     </div>
   );
